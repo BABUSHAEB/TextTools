@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Number() {
     return (
-        <div>
+        <div className="container">
             this is Number Page.
             
         </div>
