@@ -14,10 +14,16 @@ export default function NavBar(props) {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                        <Link className="nav-link" aria-current="page" to="/">Text</Link>
+                        <Link className="nav-link" aria-current="page" to="/">Profile</Link>
+                        </li>
+                        <li className="nav-item">
+                        <Link className="nav-link" aria-current="page" to="/textbox">Text Tools</Link>
                         </li>
                         <li className="nav-item">
                         <Link className="nav-link" to="/number">Number</Link>
+                        </li>
+                        <li className="nav-item">
+                        <Link className="nav-link" to="/contactme">Contact Me!</Link>
                         </li>
                         
                     </ul>

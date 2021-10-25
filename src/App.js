@@ -1,10 +1,12 @@
 // import logo from './logo.svg';
-import './App.css';
+import './index.css';
 import NavBar from './Components/NavBar';
 import TextBox from './Components/TextBox';
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Number from './Components/Number';
 import React, { useState } from 'react'
+import ContactMe from './Components/ContactMe';
+import Profile from './Components/Profile';
 
 
 
@@ -33,10 +35,16 @@ function App() {
       <NavBar  mode={mode} toggleMode={toggleMode}/>
         <Switch>
           <Route exact path="/">
+            <Profile />
+          </Route>
+          <Route exact path="/textbox">
             <TextBox mode={mode}/>
           </Route>
           <Route exact path="/number">
             <Number/>
+          </Route>
+          <Route exact path="/contactme">
+            <ContactMe/>
           </Route>
         </Switch>
    
