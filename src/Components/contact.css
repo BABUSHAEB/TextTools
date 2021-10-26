@@ -4,25 +4,29 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: auto;
-    padding: 4px;
+    padding: 1.2rem;
     background-color: rgb(104, 219, 219);
     width: 300px;
     border-radius: 10px;
     
 }
-input{
-    margin: 3%;
+/* .form-margin{
+    margin-left: auto !important;
+    margin-right: auto !important;
+} */
+.input-contact{
+    margin: 3% 3%;
     padding: 3%;
     width: 250px;
     border-radius: 5px;
     border:none;
 
 }
-button{
-    margin: 3%;
+.button-contact{
+    margin: 3% 3%;
     text-align: center;
     padding: 3%;
-    width: 270px;
+    width: 250px;
     border-radius: 5px;
     color: aliceblue;
     font-size:20px;

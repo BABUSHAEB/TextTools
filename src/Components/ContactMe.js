@@ -60,17 +60,17 @@ export default function ContactMe() {
             {/* <iframe title="Contact Me!" className="contactForm container-fluid" src="https://docs.google.com/forms/d/e/1FAIpQLSeImnb6UaFMRaBZ054zoiYcOZYPqdkUrAM9aht8VmbGNWlmRA/viewform?embedded=true" width="640" height="1040" frameBorder="0" marginHeight="0" marginWidth="0">Loading…</iframe>
              */}
               <div className="loginForm">
-            <h1>Contact Me</h1>
-            <form action="" method="POST">
-                <input type="text" name="Name"  placeholder="Username"
-                value={user.name} onChange={getUserData} /><br/>
-                <input type="email " name="Email"  placeholder="Email"
-                value={user.email} onChange={getUserData}/><br/>
-                <input type="number" name="Phone"  placeholder="Phone Number"
-                value={user.phone} onChange={getUserData}/><br/>
-                <input type="text" name="Remarks" placeholder="Remarks"
+            <h1>Contact Me ☎</h1>
+            <form className="form-margin" method="POST">
+                <input className="input-contact" type="text" name="Name"  placeholder="Username"
+                value={user.Name} onChange={getUserData} /><br/>
+                <input className="input-contact" type="email " name="Email"  placeholder="Email"
+                value={user.Email} onChange={getUserData}/><br/>
+                <input className="input-contact" type="number" name="Phone"  placeholder="Phone Number"
+                value={user.Phone} onChange={getUserData}/><br/>
+                <input className="input-contact" type="text" name="Remarks" placeholder="Remarks"
                 value={user.Remarks} onChange={getUserData} /><br/>
-                <button onClick={pressButton}>Contact</button>
+                <button className="button-contact" onClick={pressButton}>Submit</button>
             </form>
         </div>
             
