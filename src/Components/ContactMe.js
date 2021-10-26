@@ -22,20 +22,36 @@ export default function ContactMe() {
 
         const { Name,Email,Phone,Remarks} = user;
 
-         const res = await fetch("https://firstfirebase-24839-default-rtdb.firebaseio.com/contactform.json",{
-            method: "POST",
-            headers:{
-                "Content-Type": "application/json",
-            },
-            body:JSON.stringify({
-                Name,
-                Email,
-                Phone,
-                Remarks,
-            })
-        }
+        if(Name && Email && Phone && Remarks){
+            const res = await fetch("https://firstfirebase-24839-default-rtdb.firebaseio.com/contactform.json",{
+               method: "POST",
+               headers:{
+                   "Content-Type": "application/json",
+               },
+               body:JSON.stringify({
+                   Name,
+                   Email,
+                   Phone,
+                   Remarks,
+               })
+   
+           }
+   
+           )
+           if(res){
+               setUser({
+                   Name:"",
+                   Email:"",
+                   Phone:"",
+                   Remarks:"",
+               });
+               alert("Data Stored Sucessfully");
+   
+           }
 
-        )
+        }else{
+            alert("Please fill all field")
+        }
 
     }
 

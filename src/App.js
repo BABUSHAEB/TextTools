@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Number from './Components/Number';
 import React, { useState } from 'react'
 import ContactMe from './Components/ContactMe';
-import Profile from './Components/Profile';
+// import Profile from './Components/Profile';
 
 
 
@@ -34,10 +34,10 @@ function App() {
    <Router>
       <NavBar  mode={mode} toggleMode={toggleMode}/>
         <Switch>
-          <Route exact path="/">
+          {/* <Route exact path="/">
             <Profile />
-          </Route>
-          <Route exact path="/textbox">
+          </Route> */}
+          <Route exact path="/">
             <TextBox mode={mode}/>
           </Route>
           <Route exact path="/number">

@@ -5,7 +5,7 @@
     margin-right: auto;
     margin-bottom: auto;
     padding: 4px;
-    background-color: aqua;
+    background-color: rgb(104, 219, 219);
     width: 300px;
     border-radius: 10px;
     
@@ -27,7 +27,7 @@ button{
     color: aliceblue;
     font-size:20px;
     border:none;
-    background-color:rgb(224, 232, 240);
+    background-color:rgb(20, 109, 211);
     
 }
 botton :hover{

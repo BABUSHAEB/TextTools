@@ -13,11 +13,11 @@ export default function NavBar(props) {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li className="nav-item">
+                        {/* <li className="nav-item">
                         <Link className="nav-link" aria-current="page" to="/">Profile</Link>
-                        </li>
+                        </li> */}
                         <li className="nav-item">
-                        <Link className="nav-link" aria-current="page" to="/textbox">Text Tools</Link>
+                        <Link className="nav-link" aria-current="page" to="/">Text Tools</Link>
                         </li>
                         <li className="nav-item">
                         <Link className="nav-link" to="/number">Number</Link>
