@@ -9,7 +9,7 @@ function TextBox(props) {
         setText(newText)
     }
     const allowToAcceptText = (e) =>{
-        console.log('This is Entered Text' +Text)
+        // console.log('This is Entered Text' +Text)
         setText(e.target.value)
     }
     const lowerCase = () =>{
@@ -38,7 +38,31 @@ function TextBox(props) {
             let newText = '';
             setText(newText)        
         }
+    const downloadText = () =>{
+
+               let data = Text;
+                
+            // Convert the text to BLOB.
+            const textToBLOB = new Blob([data], { type: 'text/plain' });
+            const sFileName = 'formData.txt';	   // The file to save the data.
     
+            let newLink = document.createElement("a");
+            newLink.download = sFileName;
+    
+            if (window.webkitURL != null) {
+                newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+            }
+            else {
+                newLink.href = window.URL.createObjectURL(textToBLOB);
+                newLink.style.display = "none";
+                document.body.appendChild(newLink);
+            }
+    
+            newLink.click(); 
+        
+        }
+
+        
         
     return (
         <>
@@ -51,6 +75,7 @@ function TextBox(props) {
                 <button type="button" className="btn btn-primary m-3" onClick={copyText} >Copy Text</button>
                 <button type="button" className="btn btn-primary m-3" onClick={clearBox} >Clear Text</button>
                 <button type="button" className="btn btn-primary m-3" onClick={removeExtraSpace} >Remove Extra Space</button>
+                <button type="button" className="btn btn-primary m-3" onClick={downloadText} >Download Text</button>
             </div>
             <div className="container my-3">
                 <h1>Your Text Summary</h1>
